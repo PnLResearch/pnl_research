@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PnL Research - Solana On-Chain Analytics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #58a6ff;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #8b949e;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            color: #58a6ff;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li::before {
+            content: "✓ ";
+            color: #3fb950;
+        }
+
+        .api-endpoint {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 4px;
+            padding: 10px 15px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 14px;
+        }
+
+        .method {
+            color: #3fb950;
+            font-weight: bold;
+        }
+
+        .path {
+            color: #58a6ff;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .status.ready {
+            background: #238636;
+            color: white;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #8b949e;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PnL Research</h1>
+        <p class="subtitle">Solana On-Chain Data Analysis Tool</p>
+
+        <div class="card">
+            <h2>Features</h2>
+            <ul class="feature-list">
+                <li>Fetch token price data from Birdeye API</li>
+                <li>Get transaction history from Solscan Pro API</li>
+                <li>Process raw data into OHLCV format</li>
+                <li>Calculate PnL (Profit and Loss) for wallets</li>
+                <li>Display interactive K-line charts</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>API Endpoints</h2>
+
+            <div class="api-endpoint">
+                <span class="method">GET</span>
+                <span class="path">/api/health</span>
+                - Health check
+            </div>
+
+            <div class="api-endpoint">
+                <span class="method">GET</span>
+                <span class="path">/api/kline/{token}</span>
+                - Get OHLCV K-line data
+            </div>
+
+            <div class="api-endpoint">
+                <span class="method">GET</span>
+                <span class="path">/api/trades/{wallet}</span>
+                - Get wallet trade history
+            </div>
+
+            <div class="api-endpoint">
+                <span class="method">POST</span>
+                <span class="path">/api/sync</span>
+                - Sync data from on-chain sources
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Server Status</h2>
+            <p><span class="status ready">READY</span> API server is running</p>
+        </div>
+
+        <div class="footer">
+            <p>PnL Research &copy; 2026 | <a href="https://github.com">View on GitHub</a></p>
+        </div>
+    </div>
+</body>
+</html>

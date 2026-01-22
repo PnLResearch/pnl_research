@@ -1,0 +1,93 @@
+# Environment variables (IMPORTANT: contains API keys)
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Raw data (may contain sensitive wallet info)
+data/raw/
+*.json.bak
+
+# Cache
+.cache/
+*.cache
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.temp/
+tmp/
+
+# App-specific
+.app.lock
+.gemini_discussion_history.json
+Gemini_Discussion_Latest.md
+Gemini_Audit_Report.md
+
+# Node modules (if using any JS build tools)
+node_modules/
+
+# Test coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Distribution
+*.tar.gz
+*.zip
